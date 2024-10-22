@@ -1,3 +1,11 @@
+import Blogs from "./components/blogs/blogs";
+import Header from "./components/header/header";
+
 export default function App() {
-  return <h1 className="text-3xl font-bold">Hello world!</h1>;
+  return (
+    <>
+      <Header></Header>
+      <Blogs></Blogs>
+    </>
+  );
 }
