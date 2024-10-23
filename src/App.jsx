@@ -12,9 +12,15 @@ export default function App() {
     setBookmarks(newBookmarks);
   };
 
-  const handleReadingTime = (reading_time) => {
+  const handleReadingTime = (reading_time, id) => {
     const newReadingTime = readingTime + reading_time;
     setReadingTime(newReadingTime);
+
+    // remove the blog from bookmarks
+    const remainingBookmarks = bookmarks.filter(
+      (bookmark) => bookmark.id !== id
+    );
+    setBookmarks(remainingBookmarks);
   };
 
   return (
